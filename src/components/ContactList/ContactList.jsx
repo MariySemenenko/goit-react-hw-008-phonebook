@@ -15,11 +15,11 @@ export const ContactList = () => {
 
       {contactsList.map(
         (
-          { name, phone, id } // кожен контакт має властивість name, number, id
+          { name, number, id } // кожен контакт має властивість name, number, id
         ) => (
           <li key={id}>
             <p>
-              {name}: {phone}
+              {name}: {number}
             </p>
 
             <button type="button" onClick={() => dispatch(deleteContact(id))}>
