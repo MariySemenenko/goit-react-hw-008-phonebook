@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
 
-
 export function ContactForm() {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
@@ -25,9 +24,7 @@ export function ContactForm() {
           item.number === number
       )
     ) {
-      return alert(
-        `${name} or ${number} is already in contacts`
-      );
+      return alert(`${name} or ${number} is already in contacts`);
     }
 
     dispatch(addContact({ name, number }));
